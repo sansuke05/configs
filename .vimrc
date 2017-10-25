@@ -1,6 +1,5 @@
 " matchit {{{
 " if や for などの文字にも%で移動
-sourse $VIMRUNTIME/macros/matchit.vim
 let b:match_ignorecase = 1
 " }}}
 
