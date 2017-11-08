@@ -198,6 +198,9 @@
 # 
 # alias cd=cd_func
 
+# execute fish process when open terminal
+exec fish
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/sansuke05/.sdkman"
 # export GOPATH=/cygdrive/c/Go
@@ -229,6 +232,7 @@ alias java_home='/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands
 # ssh alias
 alias ssh_aizu='ssh -Y s1230042@sshgate.u-aizu.ac.jp'
 # alias xwin='/bin/run.exe --quote /usr/bin/bash.exe -l -c "cd; exec /usr/bin/startxwin" &'
+alias ssh_pi='ssh pi@192.168.179.50'
 
 #mvn
 MAVEN_OPTS="-Xmx512M -Duser.language=en"
