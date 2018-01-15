@@ -13,5 +13,5 @@ set PATH $HOME/Library/Android/sdk/platform-tools $PATH
 set ANDROID_HOME $HOME/Library/Android/sdk
 
 # command alias
-alias tree='pwd;find . | sort | sed '\''1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'\'''
+#alias tree='pwd;find . | sort | sed '\''1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'\'''
 
