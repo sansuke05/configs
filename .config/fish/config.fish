@@ -18,6 +18,10 @@ set ANDROID_HOME $HOME/Library/Android/sdk
 # command alias
 #alias tree='pwd;find . | sort | sed '\''1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'\'''
 
+# pyenv path
+#set PYENV_ROOT $HOME/.pyenv
+#set PATH $PYENV_ROOT/bin:$PATH
+
 
 # functions
 
