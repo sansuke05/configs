@@ -22,6 +22,10 @@ set ANDROID_HOME $HOME/Library/Android/sdk
 #set PYENV_ROOT $HOME/.pyenv
 #set PATH $PYENV_ROOT/bin:$PATH
 
+# ptex2pdf config
+set PATH /Library/TeX/texbin/ $PATH
+setenv TEXINPUTS .//;
+set TEXMFCNF /usr/local/texlive/2017basic/texmf-dist/web2c/
 
 # functions
 
