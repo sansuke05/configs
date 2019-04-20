@@ -1,5 +1,20 @@
 # export DISPLAY=:0.0
 
+# zplug setups
+bindkey -e
+
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-autosuggestions"
+
+if ! zplug check --verbose; then
+    printf 'Install? [y/N]: '
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
+
+# autoload
 autoload -U compinit
 compinit
 
@@ -24,8 +39,11 @@ SAVEHIST=10000
 setopt correct
 
 # prompt
-PROMPT="${fg[cyan]%}%m${fg[white]}:${fg[green]}%~
-${fg[yellow]}%n${reset_color} $ "
+source ~/git_prompt.zsh
+source ~/prompt.zsh
+#PROMPT="${fg[cyan]%}%m${fg[white]}:${fg[green]}%~
+#${fg[yellow]}%n${reset_color} $ "
+#PROMPT='%{^[[30;48;5;237m%}%{^[[38;5;178m%}%n@%m %{^[[30;48;5;067m%}%{^[[38;5;007m%}%~%{^[[0m%}'
 
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
@@ -62,6 +80,9 @@ MAVEN_OPTS="-Xmx512M -Duser.language=en"
 
 #python3 path
 #export PYTHONPATH="/usr/local/lib/python3.6/site-packages/:$PYTHONPATH"
+export CFLAGS="-I$(brew --prefix readline)/include -I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+export LDFLAGS="-L$(brew --prefix readline)/lib -L$(brew --prefix openssl)/lib"
+export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs
 
 # gcloud sdk location
 
