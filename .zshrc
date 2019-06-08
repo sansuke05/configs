@@ -16,7 +16,10 @@ zplug load
 
 # autoload
 autoload -U compinit
-compinit
+compinit -u
+
+autoload -U compinit
+compinit -u
 
 autoload -Uz colors
 colors
@@ -43,7 +46,6 @@ source ~/git_prompt.zsh
 source ~/prompt.zsh
 #PROMPT="${fg[cyan]%}%m${fg[white]}:${fg[green]}%~
 #${fg[yellow]}%n${reset_color} $ "
-#PROMPT='%{^[[30;48;5;237m%}%{^[[38;5;178m%}%n@%m %{^[[30;48;5;067m%}%{^[[38;5;007m%}%~%{^[[0m%}'
 
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
@@ -53,6 +55,12 @@ export SDKMAN_DIR="/home/sansuke05/.sdkman"
 # export GOPATH=/cygdrive/c/Go
 export PATH="/downloads/downloads/postgresql-8.4.0/src/bin:$PATH"
 
+# kotlin commandline compiler
+export KOTLIN_HOME=/Users/sansuke05/Library/kotlinc
+path=(
+    $KOTLIN_HOME/bin
+    $path
+)
 
 # [[ -s "/home/sansuke05/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sansuke05/.sdkman/bin/sdkman-init.sh"
 
