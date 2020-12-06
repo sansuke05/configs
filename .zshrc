@@ -41,6 +41,10 @@ SAVEHIST=10000
 # fix missing command
 setopt correct
 
+# glob setting
+setopt nonomatch
+
+
 # prompt
 source ~/git_prompt.zsh
 source ~/prompt.zsh
@@ -97,5 +101,14 @@ export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs
 # latex
 export TEXINPUTS='.//;'
 
+# adb path
+export PATH="/Users/sansuke05/Library/Android/sdk/platform-tools:$PATH"
+
 # start fish shell
 #exec fish
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/Users/sansuke05/.nodebrew/current/bin:/Users/sansuke05/Library/Android/sdk/platform-tools:/Users/sansuke05/Library/kotlinc/bin:/downloads/downloads/postgresql-8.4.0/src/bin:/Users/sansuke05/.zplug/bin:/Users/sansuke05/.cargo/bin:/usr/local/bin/python:/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Users/sansuke05:~/.nodebrew/current/bin:~/.nodebrew/current/lib/node_modules/npm/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
+export GOTOOLDIR=/usr/local/Cellar/go/1.15.3/libexec/pkg/tool/darwin_amd64
+export PATH=$PATH:$GOPATH/bin
